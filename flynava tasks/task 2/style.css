@@ -1,0 +1,53 @@
+.slider {
+    position: relative;
+    width: 80%; /* Adjust width as needed */
+    height: 400px; /* Set a fixed height */
+    margin: auto;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #000; /* Add background to prevent empty space */
+}
+
+.slider img {
+    width: auto;
+    height: 100%;
+    max-width: 100%;
+    object-fit: contain; /* Ensures full image fits within the slider */
+    display: none;
+}
+
+img.displaySlide {
+    display: block;
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+.slider button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 2rem;
+    padding: 10px 15px;
+    background-color: hsla(0, 0%, 0%, 0.5);
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+}
+
+/* Optional: Fade animation */
+@keyframes fade {
+    from { opacity: 0.4; }
+    to { opacity: 1; }
+}
+
+}

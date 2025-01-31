@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 01</title>
+    
+    <style>
+        h1 {
+            text-align: center;
+            margin-top: 250px;
+        }
+        button {
+            display: block;
+            margin: 0 auto;
+            width: 150px; 
+            height: 60px;
+            font-size: 18px;
+            border-radius: 10px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        p {
+            text-align: center;
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h1 id="color">HELLO, This is my First Flynava Task</h1>
+        <button onclick="changeColor()">Change Color</button>
+        <p id="message">Click the button to change my color!</p>
+    </div>
+    
+    <script>
+        function changeColor() {
+            const val = document.getElementById("color");
+            const message = document.getElementById("message");
+            const colors = ["lightblue", "lightgreen", "lightcoral", "lightgoldenrodyellow", "lightpink"];
+            const randomColor = colors[Math.floor(Math.random() * colors.length)];
+
+            val.style.backgroundColor = randomColor;
+            message.textContent = `The color has been changed to ${randomColor}`;
+        }
+    </script>
+</body>
+</html>
